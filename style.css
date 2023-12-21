@@ -13,7 +13,6 @@ main{
     max-width: 900px;
     margin: auto;
     background-color: rgb(201, 194, 194);
-    
 }
 header{
     grid-area: h;
@@ -22,12 +21,11 @@ header{
     background-size: cover;
 }
 nav{
-    grid-area: h;
+    grid-area: n;
 }
 nav ul{
     background-color:  rgb(97, 95, 95);
-    list-style: none;
-    
+    list-style: none;  
     display: grid;
     grid-template-columns: 100px 100px;
     gap: 0px;
@@ -50,6 +48,13 @@ nav a{
 article{
     grid-area: a;
     padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+img{
+    max-width: 100%;
+    padding-top: 30px;
 }
 h2{
     color: black;
@@ -70,10 +75,6 @@ article li{
     font-size: 10px;
     color: black;
 }
-img{
-    float: right;
-    max-width: 30%;
-}
 footer{
     grid-area: f;
     background-color: rgb(228, 189, 16);
@@ -91,10 +92,12 @@ tr{
 th{
     border: 1px solid black;
     border-collapse: collapse;
+    padding: 5px;
 }
 td{
     border: 1px solid black;
     border-collapse: collapse;
+    padding: 5px;
 }
 tr:nth-child(odd){
     background-color: rgb(80, 77, 77);
@@ -102,3 +105,16 @@ tr:nth-child(odd){
 tr :hover{
     background-color: rgb(196, 163, 103);
 }
+
+@media screen and (max-width: 700px) {
+    article{
+        grid-template-columns: 1fr;
+    }
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    nav li{
+        border-bottom: 1px solid rgb(175, 175, 175);
+    }
+  }
